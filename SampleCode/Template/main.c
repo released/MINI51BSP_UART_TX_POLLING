@@ -270,6 +270,9 @@ void UART_Init(void)
 
     /* Configure UART0 and set UART0 baud rate */
     UART_Open(UART, 115200);
+
+    // UART->TOR = (UART->TOR & ~UART_TOR_DLY_Msk)| (0x7F00);
+
     NVIC_SetPriority(UART_IRQn, 3);
 
     UART_EnableInt(UART, UART_IER_RDA_IEN_Msk | UART_IER_RTO_IEN_Msk);

@@ -10,3 +10,10 @@ udpate @ 2024/04/09
 
 ![image](https://github.com/released/MINI51BSP_UART_TX_POLLING/blob/main/TX_byte_invertal.jpg)
 
+
+3. below is LA capture between each byte , if enable DLY in UA_TOR register , 
+
+refer to UART->TOR = (UART->TOR & ~UART_TOR_DLY_Msk)| (0x7F00);
+
+![image](https://github.com/released/MINI51BSP_UART_TX_POLLING/blob/main/TX_byte_invertal_w_delay.jpg)
+
